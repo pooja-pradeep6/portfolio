@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pooja Pradeep · Data Science & AI Portfolio</title>
+<meta name="description" content="Final-year BCA student specialising in data science, machine learning and NLP. Projects, internship and achievements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#060914">
+<meta property="og:title" content="Pooja Pradeep · Data Science & Software Developer">
+<meta property="og:description" content="Final-year BCA student building ML models, dashboards and web apps. See projects, internship and achievements.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23060914'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2300F0FF'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="glow" id="glow"></div>
+<div class="progress" id="progress"></div>
+<header class="nav">
+  <a class="logo" href="#top">Pooja Pradeep</a>
+  <nav>
+    <a href="#about">About</a><a href="#playground">Featured</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+    <a href="#skills">Skills</a><a href="#achievements">Achievements</a><a class="pill" href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker">Hello, I'm</p>
+    <h1 class="name"><span>Pooja</span> <span>Pradeep</span></h1>
+    <p class="role"><span id="typed"></span><i class="caret"></i></p>
+    <p class="open"><i></i>Open to opportunities: Data Analyst · Business Analyst · Software Engineer</p>
+    <p class="lead">Final-year BCA student turning messy data into decisions people can trust, and models into things people can understand.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">Explore my work</a>
+      <a class="btn" href="assets/Pooja_Pradeep_Resume.pdf" download>Download resume</a>
+      <a class="btn" href="#contact">Say hello</a>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="photo-card" data-tilt="12">
+      <div class="frame"><img src="assets/pooja.jpg" alt="Portrait of Pooja Pradeep" width="900" height="1143"></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Highlights">
+  <div><b data-count="9.63" data-dec="2">0</b><span>CGPA out of 10</span></div>
+  <div><b data-count="240">0</b><span>hour AI internship</span></div>
+  <div><b data-count="2">0</b><span>semesters with a perfect 10 SGPA</span></div>
+  <div><b data-count="7">0</b><span>projects built</span></div>
+</section>
+
+<section id="strengths">
+  <h2>What I bring</h2>
+  <div class="pillars">
+    <div class="pillar"><span>01</span><h3>Analyst mindset</h3><p>I question the headline number. In my NLP project, 87% accuracy hid a toxic-class F1 of 0.42, so I reported per-class results and the trade-offs.</p></div>
+    <div class="pillar"><span>02</span><h3>End-to-end builder</h3><p>From a RAG pipeline (ingestion, chunking, embeddings, retrieval) to Flask apps with authentication, I ship working things, not just notebooks.</p></div>
+    <div class="pillar"><span>03</span><h3>Clear communicator</h3><p>Class Representative, conference presenter and Power BI storyteller. I explain models and data in plain language.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <div>
+    <h2>About me</h2>
+    <p>I'm a final-year BCA student at Marian College Kuttikkanam (Autonomous), affiliated with Mahatma Gandhi University, specialising in AI &amp; ML. My coursework and projects cover machine learning, NLP, Django, Flask and Flutter.</p>
+    <p>Beyond code, I serve as Class Representative and as Student Representative for the Value Education Programme, and I presented research on human-centred design at a national conference. I like work where analysis, clear communication and teamwork meet.</p>
+    <p>I'm looking for roles in data analysis, business analysis, data science and software engineering where I can learn fast and ship useful things.</p>
+    <ul class="facts">
+      <li><b>Education</b>BCA, CGPA 9.63 / 10</li>
+      <li><b>Class XII</b>92% · Sreyas Public School</li>
+      <li><b>Class X</b>95% · Sreyas Public School</li>
+      <li><b>Based in</b>Kerala, India</li>
+    </ul>
+  </div>
+</section>
+
+<section id="playground">
+  <h2>Featured project</h2>
+  <span class="badge">Featured case study</span>
+  <p class="intro">This demo comes from my mini NLP project, <b>Toxic Comment Classification with Explainability</b>. The full version trains TF-IDF + Logistic Regression on 30,000 Civil Comments (87% accuracy) and uses LIME to show which words drive each prediction. Here is a simplified version you can play with.</p>
+  <p class="meta"><a class="btn" href="https://github.com/pooja-pradeep6/NLP-Toxic-Comment-Classification/" target="_blank" rel="noopener">View the full project on GitHub</a></p>
+  <div class="lab" id="lab">
+    <div class="lab-head">
+      <strong>Try it: explain a comment</strong>
+      <span>A small in-browser demo of the idea behind my toxic comment project</span>
+    </div>
+    <textarea id="labInput" rows="3" aria-label="Comment to analyse">You are so stupid, nobody wants to hear your opinion</textarea>
+    <div class="words" id="labWords" aria-live="polite"></div>
+    <div class="bars">
+      <div><span>Clean</span><i><b id="barClean"></b></i><em id="pClean">0%</em></div>
+      <div><span>Toxic</span><i><b id="barToxic"></b></i><em id="pToxic">0%</em></div>
+    </div>
+    <p class="note">Word weights come from a tiny hand-made list, so this is a teaching demo, not my trained model. The real model (TF-IDF + Logistic Regression + LIME) is in the Projects section.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="filters" role="tablist" aria-label="Filter projects">
+    <button class="on" data-f="all">All</button><button data-f="ml">ML &amp; NLP</button>
+    <button data-f="data">Data analysis</button><button data-f="web">Web &amp; apps</button>
+  </div>
+  <div class="grid">
+    <article class="card" data-c="ml">
+      <h3>Toxic comment classification with explainability</h3>
+      <p class="tags">Python · scikit-learn · TF-IDF · LIME · Hugging Face</p>
+      <p>Classifies online comments as Toxic or Clean and uses LIME to show which words drove each prediction.</p>
+      <div class="more"><ul>
+        <li>Used 30,000 Civil Comments (92.18% clean, 7.82% toxic), split 80/20 and stratified.</li>
+        <li>Logistic Regression with balanced class weights reached 87% accuracy, with toxic recall 0.58 and F1 0.42.</li>
+        <li>Reported why accuracy alone misleads on imbalanced data and suggested BERT, n-grams and a human review stage.</li>
+      </ul><a href="https://github.com/pooja-pradeep6/NLP-Toxic-Comment-Classification/" target="_blank" rel="noopener">View on GitHub</a></div>
+      <button class="toggle" aria-expanded="false">Show details</button>
+    </article>
+    <article class="card" data-c="ml">
+      <h3>AI-powered RAG knowledge base &amp; chatbot</h3>
+      <p class="tags">n8n · Pinecone · Hugging Face embeddings</p>
+      <p>Chatbots that answer questions from custom documents, built for an IPSR Course Recommender and a Union Budget Analysis tool.</p>
+      <div class="more"><ul>
+        <li>Automated ingestion: document loading, text chunking, embedding generation and semantic retrieval in Pinecone.</li>
+        <li>Built during my 240-hour internship at IPSR Solutions.</li>
+      </ul></div>
+      <button class="toggle" aria-expanded="false">Show details</button>
+    </article>
+    <article class="card" data-c="ml">
+      <h3>Classifier comparison on the Iris dataset</h3>
+      <p class="tags">Python · SVM · KNN · Random Forest</p>
+      <p>A practical comparison of KNN, SVM and Random Forest on iris species data.</p>
+      <div class="more"><ul>
+        <li>Tested SVM with Linear, RBF, Sigmoid and Polynomial kernels.</li>
+        <li>Evaluated with accuracy and confusion matrices; SVM and Random Forest generalised better than KNN.</li>
+      </ul></div>
+      <button class="toggle" aria-expanded="false">Show details</button>
+    </article>
+    <article class="card" data-c="data">
+      <h3>Airbnb NYC 2019 dashboard</h3>
+      <p class="tags">Power BI · EDA</p>
+      <p>An interactive dashboard on NYC listings with room type and borough slicers.</p>
+      <div class="more"><ul>
+        <li>Average price is $152.72 against a median of $106, so prices are right-skewed.</li>
+        <li>Entire homes (~52%) and private rooms (~46%) dominate; Williamsburg leads with 3,920 listings.</li>
+        <li>Price and review count barely correlate (-0.048).</li>
+      </ul></div>
+      <button class="toggle" aria-expanded="false">Show details</button>
+    </article>
+    <article class="card" data-c="data">
+      <h3>Bank marketing analysis</h3>
+      <p class="tags">Power BI · customer segmentation</p>
+      <p>Explored who subscribes to a term deposit across job, marital status, education and loans.</p>
+      <div class="more"><ul>
+        <li>Admin (about 10.4K) and blue-collar (about 9.3K) customers form the largest groups.</li>
+        <li>Single customers subscribe most (14.00%) and 60.52% of customers are married.</li>
+        <li>Higher education tends to mean higher subscription rates.</li>
+      </ul></div>
+      <button class="toggle" aria-expanded="false">Show details</button>
+    </article>
+    <article class="card" data-c="web">
+      <h3>Secret Notes: personal notes vault</h3>
+      <p class="tags">Flask · Flask-SQLAlchemy · Flask-WTF · Jinja2</p>
+      <p>A full-stack CRUD app with secure user authentication and validated forms.</p>
+      <div class="more"><ul>
+        <li>Create, view, edit and delete private notes per user.</li>
+        <li>Routing, Jinja2 templates and CSS for the interface.</li>
+      </ul></div>
+      <button class="toggle" aria-expanded="false">Show details</button>
+    </article>
+    <article class="card" data-c="web">
+      <h3>Railway reservation system</h3>
+      <p class="tags">Java Swing · SQLite · OOP</p>
+      <p>A desktop app for booking, cancellation and seat allocation.</p>
+      <div class="more"><ul>
+        <li>Designed with object-oriented principles.</li>
+        <li>SQLite stores passenger and reservation data.</li>
+      </ul></div>
+      <button class="toggle" aria-expanded="false">Show details</button>
+    </article>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="when">Apr 2026 – May 2026</div>
+    <div>
+      <h3>Data Science &amp; AI Intern, IPSR Solutions Limited</h3>
+      <ul>
+        <li>Completed 240 hours covering machine learning, web development and generative AI.</li>
+        <li>Built and evaluated ML models with Python and scikit-learn, and designed business dashboards in Power BI.</li>
+        <li>Developed Django and Flask web apps with database integration.</li>
+        <li>Contributed to RAG chatbots for real-world use cases.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="job">
+    <div class="when">2026 – 2027</div>
+    <div>
+      <h3>Class Representative, Marian College Kuttikkanam</h3>
+      <ul><li>Third-year class lead and a link between students and faculty; also Student Representative for the Value Education Programme.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Languages</h3><span>Python</span><span>Java</span><span>C++</span><span>SQL</span><span>Dart</span></div>
+    <div><h3>ML &amp; data</h3><span>scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Power BI</span><span>RAG</span><span>NLP</span></div>
+    <div><h3>Web &amp; apps</h3><span>Flask</span><span>Django</span><span>Flutter</span><span>HTML</span><span>CSS</span></div>
+    <div><h3>Data &amp; tools</h3><span>MySQL</span><span>SQLite</span><span>GitHub</span><span>VS Code</span><span>Google Colab</span></div>
+    <div><h3>Foundations</h3><span>OOP</span><span>DSA</span><span>DBMS</span><span>SDLC</span></div>
+    <div><h3>People skills</h3><span>Communication</span><span>Leadership</span><span>Teamwork</span><span>Time management</span></div>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements &amp; leadership</h2>
+  <ul class="timeline">
+    <li><b>Academic Proficiency Award</b><span>2024–25 and 2025–26</span></li>
+    <li><b>Perfect 10.0 SGPA in two semesters</b><span>BCA, Marian College</span></li>
+    <li><b>Certificate of Merit</b><span>Presented "Importance of Human-Centred Design" at the National Conference on Equitable Digital Access</span></li>
+    <li><b>Volunteer</b><span>National Conference on Equitable Digital Access, with Mozilla's Responsible Computing Challenge</span></li>
+    <li><b>Committee member, Hospitality Team</b><span>SAHYA'26 intercollegiate fest</span></li>
+    <li><b>Certifications</b><span>Data Science &amp; AI Internship (IPSR Solutions); Introduction to Machine Learning (Simplilearn)</span></li>
+  </ul>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's work together</h2>
+  <p>Open to internships and entry-level roles in data, analytics and software.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:pradeeppooja836@gmail.com">pradeeppooja836@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/pooja-pradeep--" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/pooja-pradeep6" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="assets/Pooja_Pradeep_Resume.pdf" download>Resume (PDF)</a>
+  </div>
+</section>
+</main>
+<footer>© <span id="yr"></span> Pooja Pradeep</footer>
+<script src="script.js"></script>
+</body>
+</html>
